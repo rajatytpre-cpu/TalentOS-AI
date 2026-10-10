@@ -23,7 +23,7 @@ def _client():
 def ask_gemini(prompt, system_instruction="You are TalentOS AI, a careful HR and workforce-management assistant."):
     """Generate a response with Gemini; errors are surfaced to the caller."""
     client = _client()
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    model = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
     response = client.models.generate_content(
         model=model,
         contents=prompt,
